@@ -4,7 +4,25 @@
     --text-color: #19191B;
     --white-color: #FFF;
 }
+html {
 
+    background-image: url(./src/);
+    
+    background-repeat: no-repeat;
+    
+    background-position: center center;
+    
+    background-attachment: fixed;
+    
+    -webkit-background-size: cover;
+    
+    -moz-background-size: cover;
+    
+    -o-background-size: cover;
+    
+    background-size: cover;
+    
+    }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
