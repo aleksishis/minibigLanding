@@ -4,11 +4,8 @@
     --text-color: #19191B;
     --white-color: #FFF;
 }
-html {
-
-    /* background-image: url(./src/out_of_focus_background_with_pink_tones_2024_10_16_17_11_01_utc.jpg); круто */
+/* html {
     background-image: url(./src/turquoise_and_orange_abstract_patterned_background_2025_02_10_05.jpg);
-    /* background-image: url(./src/vibrant_blue_watercolor_painting_background_2025_02_10_01_24_56.jpg); круто */
     
     background-repeat: no-repeat;
     
@@ -24,14 +21,31 @@ html {
     
     background-size: cover;
     
-    }
-body {
+    } */
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
+} */
+html {
+    height: 100%; /* Важно для мобильных браузеров */
+  }
+  
+  body {
+    background-image: url(./src/turquoise_and_orange_abstract_patterned_background_2025_02_10_05.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Лучше убрать для мобильных */
+    background-size: cover;
+    min-height: 100vh; /* Критически важно */
+    margin: 0; /* Сброс стандартных отступов */
+  }
+  @supports (-webkit-touch-callout: none) {
+    body {
+      background-attachment: scroll !important;
+    }
+  }
 .page {
     max-width: 1920px;
     margin: 0 auto;
@@ -82,7 +96,7 @@ body {
     max-width: 460px;
 }
 .hero__title {
-    font-size: 50px;
+    font-size: 2.5rem;
     color: var(--secondary-color);
 }
 
@@ -171,6 +185,7 @@ body {
     color: #FFF;
 } */
 .portfolio__title{
+    font-size: 2.5rem;
     text-align: center;
 }
 .portfolio__grid {
@@ -248,48 +263,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero__container{
-        display: inline-block;
-    }
-    .hero__image>img {
-        max-width: 100%;
-    }
-    .hero__image{
-        padding-top: 20px;
-        display: inline-block;
-        align-items: center;
-    }
-    
-    .hero__title {
-        font-size: 36px;
-    }
-    .portfolio__grid {
-        grid-template-columns: 1fr;
-    }
-    .facts__grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
 
-    .facts__title {
-        font-size: 1.75rem;
-        margin-bottom: 40px;
-    }
-
-    .facts__item {
-        padding: 20px;
-    }
-
-    .facts__btn {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-}
 
 
 
@@ -481,9 +455,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    .reviews{
+        padding: 0;
+    }
     .reviews__grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 30px;
     }
 
     .reviews__title {
@@ -499,7 +476,6 @@ body {
 
 .services {
     padding: 80px 0;
-    background-color: #ffffff14;
     text-align: center;
 }
 
@@ -636,4 +612,52 @@ body {
     max-width: 40px;
     height: auto;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero__container{
+        display: inline-block;
+    }
+    .hero__image>img {
+        max-width: 100%;
+    }
+    .hero__image{
+        padding-top: 20px;
+        display: inline-block;
+        align-items: center;
+    }
+    
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    .portfolio__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facts{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .facts__grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .facts__title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .facts__item {
+        padding: 20px;
+    }
+
+    .facts__btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
 }
