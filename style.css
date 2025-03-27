@@ -4,35 +4,14 @@
     --text-color: #19191B;
     --white-color: #FFF;
 }
-/* html {
-    background-image: url(./src/turquoise_and_orange_abstract_patterned_background_2025_02_10_05.jpg);
-    
-    background-repeat: no-repeat;
-    
-    background-position: center center;
-    
-    background-attachment: fixed;
-    
-    -webkit-background-size: cover;
-    
-    -moz-background-size: cover;
-    
-    -o-background-size: cover;
-    
-    background-size: cover;
-    
-    } */
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+
+
 html {
     height: 100%; /* Важно для мобильных браузеров */
   }
   
   body {
+    font-family: "Cormorant Garamond";
     background-image: url(./src/turquoise_and_orange_abstract_patterned_background_2025_02_10_05.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -68,7 +47,7 @@ html {
 }
 .nav__name{
     text-decoration: none;
-    color: #ff6b6b;
+    color: #ff0000;
 }
 .nav__container {
     display: flex;
@@ -97,7 +76,7 @@ html {
 }
 .hero__title {
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .hero__subtitle {
@@ -190,7 +169,7 @@ html {
 }
 .portfolio__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Уменьшил минимальный размер для лучшей адаптации */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Уменьшил минимальный размер для лучшей адаптации */
     gap: 20px;
     width: 100%; /* Заменил max-width на width для заполнения пространства */
 }
@@ -252,7 +231,10 @@ html {
     text-align: center;
     padding: 50px 20px;
 }
-
+.contact__title{
+    font-size: 2.5rem;
+    
+}
 .contact__btn {
     background: var(--primary-color);
     color: var(--white-color);
@@ -268,7 +250,7 @@ html {
 
 
 .facts {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     background-color: #f9f9f900;
     text-align: center;
 }
@@ -337,6 +319,13 @@ html {
     background-color: #ff4c4c;
     transform: scale(1.05);
 }
+@media (max-width: 1700px){
+    .portfolio__grid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+
 
 /* Медиа-запросы для адаптации */
 @media (max-width: 1024px) {
@@ -377,7 +366,7 @@ html {
 
 
  .reviews {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     background-color: #f4f4f400;
     text-align: center;
 }
